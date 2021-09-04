@@ -1,0 +1,35 @@
+.topCategories{
+    margin-top: $mg-2;
+    .categories_container{
+        padding: 0 45px;
+        h3{
+            @include styleText($color-black-0,$fs-2,$fw-bold-1)
+        }
+        .categories_content{
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            .categories_item{
+                border: 1px solid $color-gray-4;
+                box-shadow: 2px 2px 0 rgba(20,23,28,.1);
+                padding: 15px;
+                margin: 10px 5px;
+                transition: all .5s;
+                .categories_body{
+                    a{
+                        @include styleText($color-gray-4,$fs-0,$fw-normal);
+                        text-decoration: none;
+                        i{
+                            margin-right: 10px;
+                            line-height: 2px;
+                        }
+                    }
+                }
+                &:hover{
+                    transform: scale(1.05,1.05);
+                }
+            }
+
+        }
+    }
+}

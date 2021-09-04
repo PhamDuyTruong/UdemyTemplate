@@ -1,0 +1,70 @@
+.udeCarousel{
+    background-image: url(../img/cover.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    .carousel_content{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 40%;
+    }
+    h1{
+        @include styleText($color-white-0,$fs-4,$fw-bold-0);
+    }
+    p{
+        @include styleText($color-white-0,$fs-2 - 2,$fw-normal);
+    }
+    .carousel_input{
+        .form-control{
+            padding: $pd-2;
+            border-radius: 0;
+            &::placeholder{
+                @include styleText($color-gray-2,$fs-2,$fw-normal);
+            }
+            &:focus{
+               box-shadow: none;
+            }
+        }
+       .input-group-append{
+           .input-group-text{
+               background-color: $color-white-0;
+               color: $color-red-0;
+               border: none;
+               &:hover{
+                    background-color: $color-red-0;
+                    color: $color-white-0;
+               }
+           }
+       }
+
+    }
+}
+// Responsive
+@include responsive("medium"){
+    .udeCarousel{
+        position: relative;
+        .carousel_content{
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            width: 50%;
+        }
+    }
+    
+}
+
+@include responsive("small"){
+    .udeCarousel{
+        position: relative;
+        .carousel_content{
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 60%;
+        }
+    }
+    
+}

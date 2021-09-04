@@ -1,0 +1,31 @@
+.feedback{
+    margin-top: $mg-2;
+    padding: 0 45px;
+    background: $color-gray-5;
+    .feedback_container{
+        h3{
+            @include styleText($color-black-0,$fs-2,$fw-bold-0);
+        }
+        .feedback_item{
+            justify-content: space-between;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            .card{
+                .card-body{
+                    img{
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                    }
+                    span{
+                        @include styleText($color-black-0,$fs-0,$fw-bold-0);
+                    }
+                }
+            }
+        }
+    }
+}

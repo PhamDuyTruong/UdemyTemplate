@@ -1,0 +1,105 @@
+.header__left{
+    display: flex;
+    align-items: center;
+    @include styleText($color-black-light,$fs-1,$fw-normal);
+    .navbar-brand{
+        img{
+            width:110px;
+        }
+    }
+    // flex-grow
+    .header__form{
+        flex-grow:5;
+        .form-control{
+            background-color: $color-gray-1;
+            border: none;
+            transition: none;
+            &:focus{
+                box-shadow: none;
+                background-color: $color-white-0;
+                border-top: 2px solid $color-gray-1;
+                border-bottom: 2px solid $color-gray-1;
+                border-left: 2px solid $color-gray-1;
+            }
+            &:focus + .input-group-append{
+                .input-group-text{
+                    color: $color-red-0;
+                background-color: $color-white-0;
+                border-top: 2px solid $color-gray-1;
+                border-bottom: 2px solid $color-gray-1;
+                border-right: 2px solid $color-gray-1;
+                }
+                &:hover{
+                    .input-group-text{
+                        color: $color-white-0;
+                        background-color: $color-red-0;
+                    }
+                }
+            }
+           
+        }
+    }
+}
+    .input-group-append{
+        .input-group-text{
+            background-color: $color-gray-1;
+            color: $color-red-0;
+            border: none;
+        }
+       
+    }
+.header__right{
+    .navbar-nav{
+        justify-content: space-between;
+        width: 100%;
+        .nav-item{
+            .nav-link{
+                @include styleText($color-black-light,$fs-1,$fw-normal);
+            }
+        }
+        .ude-business{
+            .nav-link:hover{
+                border: 1px solid $color-gray-1;
+                background-color: $color-gray-1;
+                transition: none;
+            }
+        }
+        .ude-teach{
+            .nav-link:hover{
+                border: 1px solid $color-gray-1;
+                background-color: $color-gray-1;
+                transition: none;
+            }
+        }
+        .nav-item:nth-child(3){
+            .nav-link:hover{
+                border-radius: 50%;
+            background-color: $color-gray-1;
+            }
+            
+        }
+    }
+    
+}
+
+// RESPONSIVE
+@include responsive("extra-large"){
+    .header__right{
+        .ude-business,.ude-teach{
+            display: none;
+        }
+    }
+}
+
+@include responsive("medium"){
+    .header__left{
+        .header__cate,.header__form{
+            display: none;
+        }
+    }
+    .header__right{
+        .ude-btnGroup{
+            display: none;
+        }
+    }
+}

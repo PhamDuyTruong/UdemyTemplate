@@ -1,0 +1,35 @@
+.companies{
+    background: $color-gray-5;
+    height: 300px;
+    .company_container{
+        padding: 0 45px;
+        width: 100%;
+        .title{
+            text-align: center;
+            @include styleText($color-gray-4,$fs-1,$fw-normal);
+            margin-bottom: 10px;
+        }
+        .company_logo{
+            a{
+                width: 100%;
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 50px;
+            }
+        }
+        .company_content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            padding: 0 65px;
+            .company_item{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    @include styleText($color-black-0,$fs-2,$fw-bold-1);
+                }
+            }
+        }
+    }
+}

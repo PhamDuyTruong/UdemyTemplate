@@ -1,0 +1,102 @@
+.courses {
+  margin-top: $mg-2;
+  height: 400px;
+  padding: 0 45px;
+  .courses_content {
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    .courses_item {
+      p:first-child {
+        @include styleText($color-black-0, $fs-0 + 4, $fw-bold);
+      }
+      p:last-child {
+        @include styleText($color-black-0, $fs-0, $fw-bold-3);
+      }
+    }
+    .courses-intro{
+        background: $color-gray-5;
+        width: 100%;
+      height: 356px;
+      margin-bottom: 28px;
+      padding-top: 4rem;
+    }
+    .mytab {
+      .nav {
+        border: none;
+        width: auto;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #dedfe0;
+        .nav-item {
+
+          &:hover {
+            .nav-link {
+              border: none;
+            }
+          }
+          .nav-link.active {
+            border: none;
+            border-bottom: 5px solid $color-blue;
+          }
+          .nav-link {
+            @include styleText($color-black-0, $fs-0, $fw-normal);
+            border: none;
+          }
+        }
+      }
+      .courses-content {
+          position: relative;
+        .card-title {
+          @include styleText($color-black-0, $fs-0, $fw-bold);
+        }
+        .card-text {
+          @include styleText($color-gray-4, $fs-1, $fw-normal);
+        }
+        .rate {
+            margin-bottom: $mg-1;
+          .rate-star {
+            @include styleText($color-yellow, $fs-1, $fw-normal);
+          }
+          span:nth-child(2) {
+            @include styleText($color-gray-4, $fs-1, $fw-bold);
+            margin-right: $mg-0;
+          }
+          span:last-child {
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+          }
+        }
+        .price{
+            del{
+                @include styleText($color-gray-4,$fs-1,$fw-normal)
+            }
+            span{
+                @include styleText($color-black-0,$fs-0,$fw-bold)
+            }
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:992px){
+  .courses_content{
+    height: 465px;
+    .courses-intro{
+      height: 0;
+      opacity: 0;
+      z-index: -1;
+    }
+    .mytab{
+      transform: translateY(-390px);
+      z-index: 10;
+    }
+  }
+}
+@media screen and(min-width:1200px){
+  .courses-intro{
+    background: $color-gray-5;
+    width: 100%;
+  height: 396px!important;
+  margin-bottom: 28px;
+  padding-top: 4rem;
+}
+}

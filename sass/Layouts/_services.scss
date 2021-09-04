@@ -1,0 +1,23 @@
+.services{
+    background-color: $color-gray-5;
+    .service_container{
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        padding: 30px 45px;
+        display: flex;
+        align-items: center;
+        grid-gap: 1rem;
+        .service_item{
+            width: 300px;
+            border: 1px solid $color-gray-1;
+            background-color: $color-white-0;
+            .service_body{
+                
+                padding: 16px;
+            }
+        }
+    }
+}
+
+

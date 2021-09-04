@@ -1,0 +1,40 @@
+.students{
+    margin-top: $mg-2;
+    padding: 0 45px;
+    h3{
+        @include styleText($color-gray-4,$fs-2,$fw-normal);
+    }
+    .student_courses{
+      justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        .card-title {
+            @include styleText($color-black-0, $fs-0, $fw-bold);
+          }
+          .card-text {
+            @include styleText($color-gray-4, $fs-1, $fw-normal);
+          }
+          .rate {
+              margin-bottom: $mg-1;
+            .rate-star {
+              @include styleText($color-yellow, $fs-1, $fw-normal);
+            }
+            span:nth-child(2) {
+              @include styleText($color-gray-4, $fs-1, $fw-bold);
+              margin-right: $mg-0;
+            }
+            span:last-child {
+              @include styleText($color-gray-4, $fs-1, $fw-normal);
+            }
+          }
+          .price{
+              del{
+                  @include styleText($color-gray-4,$fs-1,$fw-normal)
+              }
+              span{
+                  @include styleText($color-black-0,$fs-0,$fw-bold)
+              }
+          }
+    }
+}
